@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Comparing two arrays of equality
+        const arr1=[1,2,3];
+        const arr2=[1,2,3];
+        const equalValues=(arr1.length==arr2.length) && arr1.every((value,index)=>value==arr2[index]);
+        if(equalValues){
+            console.log("The arrays have equal values.");
+        }
+        else{
+            console.log("The arrays do not have equal values.");
+        }
+
+        //create an array of array
+
+      let arrayOfArrays=[
+        [1,2,3],
+        [4,5,6],
+        [7,8,9]
+      ]
+      console.log(arrayOfArrays);
+      
+      //Sorting an array with complex object
+    let students = [
+        { name: 'Rachel', age: 20, height: 165 },
+        { name: 'priya', age: 21, height: 175 },
+        { name: 'vijay', age: 23, height: 180 },
+        { name: 'vidhya', age: 22, height: 170 }
+    ];
+    students.sort((a, b) => a.students - b.students);
+    console.log(students);
+
+//Array Merging
+const fruits = ['Apple', 'Orange'];
+const fabrics = ['Nylon', 'cotton'];
+const all = [...fruits, ...fabrics];
+console.log(all);
+
+//array deduplication 
+var arr = [1, 2, 2, 3, 4, 4, 4, 5, 5];
+var n = arr.length;
+n = removeDuplicates(arr, n);
+for (var i = 0; i < n; i++) console.log(arr[i] + " ");
+function removeDuplicates(arr, n) {
+  if (n == 0 || n == 1) return n;
+  var temp = new Array(n);
+  var j = 0;
+  for (var i = 0; i < n - 1; i++) if (arr[i] != arr[i + 1]) temp[j++] = arr[i];
+  temp[j++] = arr[n - 1];
+  for (var i = 0; i < j; i++) arr[i] = temp[i];
+  return j;
+}
+
+
+    </script>
+</body>
+</html>
